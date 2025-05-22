@@ -2,6 +2,8 @@
 
 Smart Table Loader is a lightweight, browser-based tool that lets you **upload and display CSV, Excel (.xls/.xlsx), or JSON files** in a dynamic and interactive HTML table powered by DataTables.js. This tool is great for quick data analysis without the need for installing heavy software.
 
+![Smart Table Loader](preview.jpg)
+
 ## 🚀 Features
 
 - Upload `.csv`, `.xls`, `.xlsx`, or `.json` files
