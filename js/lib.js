@@ -34,13 +34,28 @@ function renderTable(data) {
     return;
   }
 
+  const allKeys = [...new Set(data.flatMap(row => Object.keys(row)))];
+
+  const normalizedData = data.map(row => {
+    const newRow = {};
+    allKeys.forEach(key => {
+      newRow[key] = row[key] !== undefined ? row[key] : '';
+    });
+    return newRow;
+  });
+
   document.getElementById('table-container').innerHTML = '<table id="data-table" class="display" style="width:100%"></table>';
 
-  const columns = Object.keys(data[0]).map(key => ({ title: key, data: key }));
+  const columns = allKeys.map(key => ({ title: key, data: key }));
+
+  $.fn.dataTable.ext.errMode = 'none';
 
   $('#data-table').DataTable({
-    data: data,
+    data: normalizedData,
     columns: columns,
-    destroy: true
+    destroy: true,
+    error: (xhr, error, thrown) => {
+      console.warn('DataTables error suppressed:', error);
+    }
   });
 }
