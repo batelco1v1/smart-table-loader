@@ -1,9 +1,9 @@
+// Elements
 const fileInput = document.getElementById('fileInput');
 const fileInfo = document.getElementById('file-info');
 const tableContainer = document.getElementById('table-container');
 
-fileInput.addEventListener('change', handleFile, false);
-
+// Functions
 function handleFile(event) {
   const file = event.target.files[0];
   if (!file) return;
@@ -110,3 +110,6 @@ function renderDataTable(data) {
     },
   });
 }
+
+// Event
+fileInput.addEventListener('change', handleFile, false);
