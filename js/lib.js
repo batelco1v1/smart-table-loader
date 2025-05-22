@@ -71,13 +71,11 @@ function showFileInfo(file) {
 function sanitizeData(data) {
   if (!Array.isArray(data) || !data.length) return [];
 
-  // Cache all unique keys from all rows only once
   const keysSet = new Set();
   data.forEach(row => Object.keys(row).forEach(key => keysSet.add(key)));
   const keys = Array.from(keysSet);
 
   return data.map(row => {
-    // Avoid recreating array each map iteration by caching keys above
     const sanitizedRow = {};
     for (const key of keys) {
       sanitizedRow[key] = row[key] ?? '';
