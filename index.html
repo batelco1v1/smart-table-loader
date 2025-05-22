@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSV/Excel to Table</title>
+  <!-- https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css -->
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <style>
+    body { padding: 20px; }
+    #fileInput { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h1>Upload CSV or Excel File</h1>
+  <input type="file" id="fileInput" accept=".csv,.xls,.xlsx">
+  <div id="table-container"></div>
+
+  <!-- Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/lib.js"></script>
+
+</body>
+</html>
