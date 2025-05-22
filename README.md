@@ -55,7 +55,7 @@ smart-table-loader/
 
 ## 🔗 Validate CSV Files
 
-Use [CSVLint.io](https://csvlint.io/validate) to validate your CSV files before uploading.
+Use [CSVLint.io](https://csvlint.io) to validate your CSV files before uploading.
 
 ## 🧪 Dependencies
 
