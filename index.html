@@ -3,23 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <title>CSV/Excel to Table</title>
-  <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="css/buttons.dataTables.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { padding: 20px; }
-    #fileInput { margin-bottom: 20px; }
-  </style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    #fileInput {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #file-info {
+      margin-bottom: 10px;
+      font-style: italic;
+      color: #555;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px 0;
+      font-size: 14px;
+      text-align: center;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+</style>
 </head>
 <body>
 
   <h1>Upload CSV or Excel File</h1>
-  <input type="file" id="fileInput" accept=".csv,.xls,.xlsx">
+  <input type="file" id="fileInput" accept=".csv,.xls,.xlsx" />
+  <div id="file-info"></div>
   <div id="table-container"></div>
 
+  <div id="table-container"></div>
+
+  <footer>
+    &copy; 2025 Max Base · 
+    <a href="https://github.com/BaseMax/smart-table-loader" target="_blank" rel="noopener noreferrer">
+      GitHub Repository
+    </a>
+  </footer>
+
   <!-- Dependencies -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/jquery.dataTables.min.js"></script>
   <script src="js/papaparse.min.js"></script>
-  <script src="js/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.buttons.min.js"></script>
+  <script src="js/buttons.html5.min.js"></script>
+  <script src="js/buttons.colVis.min.js"></script>
+  <script src="js/buttons.print.min.js"></script>
 
   <!-- Main Script -->
   <script src="js/lib.js"></script>
