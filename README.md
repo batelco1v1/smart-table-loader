@@ -71,4 +71,6 @@ This project uses:
 
 ## 📜 License
 
+This project is inspired by [csv-to-html-table](https://github.com/derekeder/csv-to-html-table), and I have enhanced it with many additional features.
+
 MIT License © 2025 [Max Base](https://github.com/BaseMax)
